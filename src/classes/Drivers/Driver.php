@@ -5,6 +5,7 @@ namespace CommunityHub\Eav\Drivers;
 
 use CommunityHub\Eav\Entity;
 use CommunityHub\Eav\Query;
+use InvalidArgumentException;
 
 /**
  * Interface which all storage strategies must implement.
@@ -21,6 +22,7 @@ interface Driver
      *     all entities from the offset to the end of the result set.
      * @return array The query results.
      * @throws Exception If there is an error returning the query results.
+     * @throws InvalidArgumentException if $offset or $length are less than 0.
      */
     public function get(string $pot, Query $query, int $offset = 0, ?int $length = null): array;
 

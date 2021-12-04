@@ -2,6 +2,7 @@
     "name": "community-hub/eav",
     "description": "Simple EAV database manager.",
     "autoload": {
+        "files": ["src/helpers.php"],
         "psr-4": {
             "CommunityHub\\Eav\\": "src/classes"
         }
@@ -24,5 +25,8 @@
         "phpcs": ["@phpcs.src", "@phpcs.tests"],
         "phpcs.src": "phpcs src --standard=phpcs.src.xml",
         "phpcs.tests": "phpcs tests --standard=phpcs.tests.xml"
+    },
+    "suggest": {
+        "ext-pdo_sqlite": "to use the sqlite driver."
     }
 }
