@@ -1,4 +1,6 @@
 {
+    "name": "community-hub/eav",
+    "description": "Simple EAV database manager.",
     "autoload": {
         "psr-4": {
             "CommunityHub\\Eav\\": "src/classes"
